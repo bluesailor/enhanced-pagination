@@ -1,0 +1,43 @@
+# composer.json 内容
+{
+    "name": "enhanced-pagination/pagination",
+    "description": "功能强大的PHP分页类，支持多种CSS框架、国际化、移动端优化和跳转功能",
+    "type": "library",
+    "keywords": ["pagination", "php", "bootstrap", "tailwind", "mobile", "i18n"],
+    "homepage": "https://github.com/bluesailor/enhanced-pagination",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Blue Sailor",
+            "email": "bluesailor@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-pdo": "*",
+        "ext-pdo_sqlite": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "classmap": [
+            "EnhancedPagination.php"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "phpunit",
+        "demo": "php -S localhost:8000",
+        "init-db": "php database.php"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.0-dev"
+        }
+    }
+}
