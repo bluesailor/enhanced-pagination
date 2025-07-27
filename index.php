@@ -220,7 +220,7 @@ $formClass = match($framework) {
     </div>
 
     <!-- 页面标题 -->
-    <div class="<?= $framework === 'bootstrap' ? 'text-center py-5 mb-4 bg-primary text-white' : ($framework === 'tailwind' ? 'text-center py-12 mb-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg' : 'demo-header') ?>">
+    <div class="<?= $framework === 'bootstrap' ? 'text-center py-5 mb-4 bg-primary text-white' : ($framework === 'tailwind' ? 'text-center py-12 mb-8 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg' : 'demo-header') ?>">
         <h1 class="<?= $framework === 'bootstrap' ? 'display-4' : ($framework === 'tailwind' ? 'text-4xl font-bold' : '') ?>">EnhancedPagination 演示</h1>
         <p class="<?= $framework === 'bootstrap' ? 'lead' : ($framework === 'tailwind' ? 'text-xl mt-4 opacity-90' : '') ?>">功能强大的PHP分页类 - 支持多框架、国际化、移动端优化</p>
         <p class="<?= $framework === 'bootstrap' ? 'mb-0' : ($framework === 'tailwind' ? 'mt-2 opacity-75' : '') ?>">当前使用: <?= ucfirst($framework) ?> | 语言: <?= strtoupper($language) ?> | 总计 <?= $total ?> 条记录</p>
@@ -308,6 +308,7 @@ $formClass = match($framework) {
                                 <th class="<?= $framework === 'tailwind' ? 'px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider' : '' ?>">姓名</th>
                                 <th class="<?= $framework === 'tailwind' ? 'px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider' : '' ?>">邮箱</th>
                                 <th class="<?= $framework === 'tailwind' ? 'px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider' : '' ?>">状态</th>
+                                <th class="<?= $framework === 'tailwind' ? 'px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider' : '' ?>">分类</th>
                                 <th class="<?= $framework === 'tailwind' ? 'px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider' : '' ?>">部门</th>
                                 <th class="<?= $framework === 'tailwind' ? 'px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider' : '' ?>">城市</th>
                                 <th class="<?= $framework === 'tailwind' ? 'px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider' : '' ?>">年龄</th>
@@ -361,8 +362,12 @@ $formClass = match($framework) {
             
             <div class="<?= $framework === 'bootstrap' ? 'mt-3' : ($framework === 'tailwind' ? 'mt-4' : '') ?>">
                 <a href="api.php?<?= http_build_query($_GET) ?>" target="_blank" 
-                   class="<?= $framework === 'bootstrap' ? 'btn btn-outline-info btn-sm' : ($framework === 'tailwind' ? 'inline-flex items-center px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-md hover:bg-blue-200' : '') ?>">
+                   class="<?= $framework === 'bootstrap' ? 'btn btn-outline-info btn-sm me-2' : ($framework === 'tailwind' ? 'inline-flex items-center px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-md hover:bg-blue-200 mr-2' : '') ?>">
                     查看完整API响应
+                </a>
+                <a href="search-debug.php" target="_blank" 
+                   class="<?= $framework === 'bootstrap' ? 'btn btn-outline-secondary btn-sm' : ($framework === 'tailwind' ? 'inline-flex items-center px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200' : '') ?>">
+                    🔍 搜索调试
                 </a>
             </div>
         </div>
