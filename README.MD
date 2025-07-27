@@ -1,6 +1,7 @@
 # EnhancedPagination - 增强版分页类
 
 一个功能强大、易于使用的PHP分页类，支持多种CSS框架、国际化、移动端优化和跳转功能。
+<img src="capture.jpg">
 
 ## ✨ 特性
 
